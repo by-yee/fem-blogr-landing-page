@@ -1,0 +1,124 @@
+.header {
+    background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+
+    // Hamburger Open Style
+    &.open {
+
+        .header__toggle {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    nav {
+        @include flex-display(row, space-between, center);
+        padding-top: 3.125rem;
+    }
+
+    &__logo {
+
+    }
+
+    &__toggle {
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $white;
+            transform-origin: 3px 1px;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__navbar {
+        @include breakpoint-down(medium) {
+            position: absolute;
+            background-color: $white;
+            width: calc(100% - 3rem);
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        @include breakpoint-up(large) {
+            @include flex-display(row, space-between, center);
+
+            width: 84%;
+        }
+    }
+
+    &__menu {
+        @include breakpoint-up(large) {
+            @include flex-display(row, normal, center);
+        }
+    }
+
+    &__item {
+        @include breakpoint-down(medium) {
+            a {
+                color: $veryDarkBlue;
+            }
+        }
+
+        @include breakpoint-up(large) {
+            &:not(:last-child) {
+                padding-right: 1.75rem;
+            }
+        }
+    }
+
+    &__link {
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 1rem;
+            height: 0.4375rem;
+            background-image: url("../images/icon-arrow-dark.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin-left: 0.25rem;
+        }
+
+        @include breakpoint-up(large) {
+            &::after {
+                background-image: url("../images/icon-arrow-light.svg");
+            }
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+    }
+
+    &__cta {
+        @include breakpoint-down(medium) {
+            @include flex-display(column, normal, center);
+
+            a {
+                color: $veryDarkBlue;
+            }
+        }
+    }
+
+    &__login {
+        @include breakpoint-up(large) {
+          padding: 0px 1.25rem;  
+        }
+    }
+}

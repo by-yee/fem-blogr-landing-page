@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/style.css">
   <title>Frontend Mentor | [Blogr]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,30 +17,64 @@
   </style>
 </head>
 <body>
-  Product
+  <header class="header">
+    <nav class="container container--pall">
+      <a href="#" class="header__logo">
+        <img src="./images/logo.svg" alt="Logo">
+      </a>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+      <a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
 
-  Company
+      <div class="header__navbar">
+        <ul class="header__menu">
+          <li class="header__item">
+            <a href="#" class="header__link">Product</a>
+            <div class="header__dropdown hide-for-desktop hide-for-mobile">
+              <a href="#">Overview</a>
+              <a href="#">Pricing</a>
+              <a href="#">Marketplace</a>
+              <a href="#">Features</a>
+              <a href="#">Integrations</a>
+            </div>
+          </li>
 
-  About
-  Team
-  Blog
-  Careers
+          <li class="header__item">
+            <a href="#" class="header__link">Company</a>
+            <div class="header__dropdown hide-for-desktop hide-for-mobile">
+              <a href="#">About</a>
+              <a href="#">Team</a>
+              <a href="#">Blog</a>
+              <a href="#">Careers</a>
+            </div>
+          </li>
 
-  Connect
+          <li class="header__item">
+            <a href="#" class="header__link">Connect</a>
+            <div class="header__dropdown hide-for-desktop hide-for-mobile">
+              <a href="#">Contact</a>
+              <a href="#">Newsletter</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </li>
+        </ul>
 
-  Contact
-  Newsletter
-  LinkedIn
+        <div class="header__cta">
+          <a href="#" class="header__login">Login</a>
+          <a href="#" class="button btn1">Sign Up</a>
+        </div>
+
+      </div>
+      
+    </nav>
+  </header>
   
-  Login
-  Sign Up
-
+ 
+  
+<!-- 
   A modern publishing platform
   Grow your audience and build your online brand
 
@@ -89,11 +125,13 @@
   
   Contact
   Newsletter
-  LinkedIn
+  LinkedIn -->
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script src="./app/js/script.js"></script>
 </body>
 </html>
