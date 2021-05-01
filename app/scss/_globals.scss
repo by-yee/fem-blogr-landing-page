@@ -15,10 +15,36 @@ body {
     $color: $white;
 }
 
+h1, h2, h3, h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: $font-overpass;
+}
+
+h1 {
+    margin-bottom: 1.125rem;
+    font-size: 2.31rem;
+    line-height: 1.2;
+
+    @include breakpoint-up(large) {
+        font-size: 3.7rem;
+    }
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+    font-weight: 300;
+    margin-bottom: 2.8125rem;
+}
+
 a, a:visited, a:hover {
-    color: $white;
-    font-family: $font-ubuntu;
-    font-size: 0.9375rem;
     text-decoration: none;
 }
 
@@ -49,13 +75,31 @@ li, ul, ol {
 // Button
 button, .button {
     display: inline-block;
-    padding: 0.6875rem 2.125rem;
+    font-family: $font-ubuntu;
+    font-size: 0.9375rem;
     border-radius: 50px;
 
     &.btn1 {
+        margin-right: 0.625rem;
         border: 0;
-        color: $lightRed;
+        color: $lightRed-cta;
         background-color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: $veryLightRed-cta;
+        }
+    }
+
+    &.btn2 {
+        color: $white;
+        background-color: none;
+        outline: 1px solid $white;
+
+        &:hover {
+            color: $lightRed-cta;
+            background-color: $white;
+        }
     }
 }
 

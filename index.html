@@ -18,6 +18,7 @@
 </head>
 <body>
   <header class="header">
+    <div class="header__image"></div>
     <nav class="container container--pall">
       <a href="#" class="header__logo">
         <img src="./images/logo.svg" alt="Logo">
@@ -29,11 +30,11 @@
         <span></span>
       </a>
 
-      <div class="header__navbar">
+      <div class="header__navbar has-fade">
         <ul class="header__menu">
           <li class="header__item">
             <a href="#" class="header__link">Product</a>
-            <div class="header__dropdown hide-for-desktop hide-for-mobile">
+            <div class="header__accordion collapse">
               <a href="#">Overview</a>
               <a href="#">Pricing</a>
               <a href="#">Marketplace</a>
@@ -44,7 +45,7 @@
 
           <li class="header__item">
             <a href="#" class="header__link">Company</a>
-            <div class="header__dropdown hide-for-desktop hide-for-mobile">
+            <div class="header__accordion collapse">
               <a href="#">About</a>
               <a href="#">Team</a>
               <a href="#">Blog</a>
@@ -54,7 +55,7 @@
 
           <li class="header__item">
             <a href="#" class="header__link">Connect</a>
-            <div class="header__dropdown hide-for-desktop hide-for-mobile">
+            <div class="header__accordion collapse">
               <a href="#">Contact</a>
               <a href="#">Newsletter</a>
               <a href="#">LinkedIn</a>
@@ -66,20 +67,23 @@
           <a href="#" class="header__login">Login</a>
           <a href="#" class="button btn1">Sign Up</a>
         </div>
-
       </div>
-      
     </nav>
+
+    <div class="header__content container container--pall">
+      <h1>A modern publishing platform</h1>
+      <h4>Grow your audience and build your online brand</h4>
+
+      <a href="#" class="button btn1">Start for Free</a>
+      <a href="#" class="button btn2">Learn More</a>
+      
+    </div>
   </header>
   
  
   
 <!-- 
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
+  
 
   Designed for the future
 
