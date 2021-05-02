@@ -1,4 +1,5 @@
 .header {
+    height: 75.2vh;
     font-family: $font-ubuntu;
 
     // Hamburger Open Style
@@ -25,6 +26,7 @@
             width: 100%;
             height: 75%;
             background-image: linear-gradient(to bottom, $veryLightRed, $lightRed);
+            border-bottom-left-radius: 100px;
             z-index: -2;
 
             @include breakpoint-up(large) {
@@ -35,17 +37,27 @@
         &::after {
             content: "";
             position: absolute;
-            height: 100%;
-            width: 100%;
+            height: 75%;
+            width: 160%;
             background-image: url("../images/bg-pattern-intro.svg");
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center right;
+            background-size: 200%;
+            background-position: 50% 34%;
+            border-bottom-left-radius: 100px;
             z-index: -1;
+
+            @include breakpoint-up(medium) {
+                height: 75%;
+                width: 160%;
+                background-size: 120%;
+                background-position: 130% 38%;
+            }
 
             @include breakpoint-up(large) {
                 height: 75%;
-                width: 132%;
+                width: 130%;
+                background-size: 170%;
+                background-position: 34% 52%;
             }
         }
     }

@@ -13,6 +13,8 @@ body {
     font-family: $font-overpass;
     font-size: $font-med;
     $color: $white;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -32,16 +34,39 @@ h1 {
 }
 
 h2 {
+    text-align: center;
 
+    @include breakpoint-up(large) {
+        font-size: 2.25rem;
+    }
 }
 
 h3 {
+    margin: 1.25rem 0px;
+    font-size: 1.6875rem;
+    text-align: center;
 
+    @include breakpoint-up(large) {
+        text-align: left;
+    }
 }
 
 h4 {
     font-weight: 300;
     margin-bottom: 2.8125rem;
+}
+
+p {
+    padding-bottom: 1.25rem;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.070em;
+    line-height: 1.7;
+
+    @include breakpoint-up(large) {
+        text-align: left;
+        padding-bottom: 3.125rem;
+    }
 }
 
 a, a:visited, a:hover {

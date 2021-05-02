@@ -90,6 +90,8 @@ body {
   padding: 0;
   font-family: "Overpass", sans-serif;
   font-size: 1.125rem;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -110,9 +112,46 @@ h1 {
   }
 }
 
+h2 {
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  margin: 1.25rem 0px;
+  font-size: 1.6875rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  h3 {
+    text-align: left;
+  }
+}
+
 h4 {
   font-weight: 300;
   margin-bottom: 2.8125rem;
+}
+
+p {
+  padding-bottom: 1.25rem;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.070em;
+  line-height: 1.7;
+}
+
+@media (min-width: 64em) {
+  p {
+    text-align: left;
+    padding-bottom: 3.125rem;
+  }
 }
 
 a, a:visited, a:hover {
@@ -180,6 +219,7 @@ button.btn2:hover, .button.btn2:hover {
 }
 
 .header {
+  height: 75.2vh;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -204,6 +244,7 @@ button.btn2:hover, .button.btn2:hover {
   height: 75%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
+  border-bottom-left-radius: 100px;
   z-index: -2;
 }
 
@@ -217,19 +258,31 @@ button.btn2:hover, .button.btn2:hover {
 .header__image::after {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: 75%;
+  width: 160%;
   background-image: url("../images/bg-pattern-intro.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
+  background-size: 200%;
+  background-position: 50% 34%;
+  border-bottom-left-radius: 100px;
   z-index: -1;
+}
+
+@media (min-width: 40em) {
+  .header__image::after {
+    height: 75%;
+    width: 160%;
+    background-size: 120%;
+    background-position: 130% 38%;
+  }
 }
 
 @media (min-width: 64em) {
   .header__image::after {
     height: 75%;
-    width: 132%;
+    width: 130%;
+    background-size: 170%;
+    background-position: 34% 52%;
   }
 }
 
@@ -505,5 +558,82 @@ button.btn2:hover, .button.btn2:hover {
 
 .header__content .btn2 {
   padding: 0.75rem 1.25rem;
+}
+
+@media (min-width: 64em) {
+  .section1::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/illustration-editor-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+  }
+}
+
+.section1 h2, .section1 h3 {
+  color: #1f3f5b;
+}
+
+.section1 h2 {
+  margin: 3.125rem 0px;
+}
+
+@media (min-width: 64em) {
+  .section1__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.section1__mobile--svg {
+  content: "";
+  position: relative;
+  min-height: 21rem;
+  background-image: url("../images/illustration-editor-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  margin: 3.125rem 0px;
+}
+
+@media (min-width: 64em) {
+  .section1__mobile--svg {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background-image: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .section1__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.section1__text {
+  color: #4b5862;
 }
 /*# sourceMappingURL=style.css.map */

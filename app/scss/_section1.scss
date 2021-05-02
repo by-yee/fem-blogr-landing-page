@@ -1,0 +1,63 @@
+.section1 {
+
+    &::before {
+        @include breakpoint-up(large) {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("../images/illustration-editor-desktop.svg");
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+        }
+    }
+
+    h2, h3 {
+        color: $veryDarkBlue;
+    }
+
+    h2 {
+        margin: 3.125rem 0px;
+    }
+
+    &__flex {
+        @include breakpoint-up(large) {
+            
+            @include flex-display(row, normal, center)
+        }
+    }
+
+    &__mobile--svg {
+       
+        content: "";
+        position: relative;
+        min-height: 21rem;
+        background-image: url("../images/illustration-editor-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center;
+        margin: 3.125rem 0px;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 2;
+            background-image: none;
+        }
+    }
+
+    &__item {
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 1;
+        }
+    }
+
+    &__content {
+
+    }
+
+    &__text {
+        color: $veryDarkGrayishBlue;
+    }
+}
