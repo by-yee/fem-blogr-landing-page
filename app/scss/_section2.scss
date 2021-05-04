@@ -1,0 +1,114 @@
+.section2 {
+
+    &__background {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 80%;
+            background-image: linear-gradient(to bottom, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+            z-index: -2;
+
+            @include breakpoint-up(large) {
+                height: 63%;
+                background-image: linear-gradient(to right, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 80%;
+            width: 100%;
+            background-image: url("../images/bg-pattern-circles.svg");
+            background-repeat: no-repeat;
+            background-size: 156%;
+            background-position: center 144%;
+            z-index: -1;
+
+            @include breakpoint-up(medium) {
+                background-position: center 96%;
+            }
+
+            @include breakpoint-up(large) {
+                height: 60%;
+                background-size: 68%;
+                background-position: center 86%;
+                left: -30%;
+            }
+        }
+    }
+
+    &__image--mobile {
+        
+    }
+
+    &__flex {
+        @include flex-display(column, normal, center);
+
+        @include breakpoint-up(large) {
+            @include flex-display(row, normal, center);
+
+            min-height: 40vh;
+        }
+    }
+
+    &__image--desktop {
+        flex: 3;
+
+        // &::before {
+            // content: "";
+            // position: absolute;
+            // width: 100%;
+            // min-height: 100%;
+            // background-image: url("../images/illustration-phones.svg");
+            // background-repeat: no-repeat;
+            // background-size: 100%;
+            // background-position: center center;
+            // right: 0;
+            // display: block;
+            // z-index: 1;
+            // top: 1789px;
+        // }
+
+        @include breakpoint-up(large) {
+            flex: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                min-height: 100%;
+                background-image: url("../images/illustration-phones.svg");
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center center;
+                top: 216%;
+                right: 24%;
+            }
+        }
+    }
+
+    &__content {
+        flex: 2;
+        color: $white;
+
+        h2 {
+            font-size: 2.625rem;
+        }
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            padding: 0.625rem;
+
+            h2 {
+                font-size: 2.4rem;
+                text-align: left;
+            }
+
+            p {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

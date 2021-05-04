@@ -197,8 +197,8 @@ button.btn1:hover, .button.btn1:hover {
 
 button.btn2, .button.btn2 {
   color: white;
-  background-color: none;
-  outline: 1px solid white;
+  background-color: transparent;
+  border: 1px solid white;
 }
 
 button.btn2:hover, .button.btn2:hover {
@@ -219,7 +219,7 @@ button.btn2:hover, .button.btn2:hover {
 }
 
 .header {
-  height: 75.2vh;
+  height: 85vh;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -237,11 +237,11 @@ button.btn2:hover, .button.btn2:hover {
           transform: rotate(-45deg);
 }
 
-.header__image::before {
+.header__background::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 75%;
+  height: 85%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
   border-bottom-left-radius: 100px;
@@ -249,28 +249,28 @@ button.btn2:hover, .button.btn2:hover {
 }
 
 @media (min-width: 64em) {
-  .header__image::before {
+  .header__background::before {
     background-image: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
     background-image: linear-gradient(to right, #ff8f70, #ff3d54);
   }
 }
 
-.header__image::after {
+.header__background::after {
   content: "";
   position: absolute;
-  height: 75%;
+  height: 85%;
   width: 160%;
   background-image: url("../images/bg-pattern-intro.svg");
   background-repeat: no-repeat;
   background-size: 200%;
-  background-position: 50% 34%;
+  background-position: 45% 30%;
   border-bottom-left-radius: 100px;
   z-index: -1;
 }
 
 @media (min-width: 40em) {
-  .header__image::after {
-    height: 75%;
+  .header__background::after {
+    height: 85%;
     width: 160%;
     background-size: 120%;
     background-position: 130% 38%;
@@ -278,10 +278,10 @@ button.btn2:hover, .button.btn2:hover {
 }
 
 @media (min-width: 64em) {
-  .header__image::after {
-    height: 75%;
+  .header__background::after {
+    height: 85%;
     width: 130%;
-    background-size: 170%;
+    background-size: 180%;
     background-position: 34% 52%;
   }
 }
@@ -552,6 +552,13 @@ button.btn2:hover, .button.btn2:hover {
   color: white;
 }
 
+@media (max-width: 39.9375em) {
+  .header__content {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
 .header__content .btn1 {
   padding: 0.75rem;
 }
@@ -564,12 +571,23 @@ button.btn2:hover, .button.btn2:hover {
   .section1::before {
     content: "";
     position: absolute;
-    height: 100%;
+    height: 144%;
     width: 100%;
     background-image: url("../images/illustration-editor-desktop.svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 65%;
     background-position: center center;
+    left: 38%;
+  }
+}
+
+.section1__content {
+  margin-bottom: 14.125rem;
+}
+
+@media (min-width: 64em) {
+  .section1__content {
+    margin-bottom: 6.5625rem;
   }
 }
 
@@ -600,7 +618,6 @@ button.btn2:hover, .button.btn2:hover {
 }
 
 .section1__mobile--svg {
-  content: "";
   position: relative;
   min-height: 21rem;
   background-image: url("../images/illustration-editor-mobile.svg");
@@ -635,5 +652,138 @@ button.btn2:hover, .button.btn2:hover {
 
 .section1__text {
   color: #4b5862;
+}
+
+.section2__background::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+  background-image: linear-gradient(to bottom, #2c2d3f, #3f4164);
+  z-index: -2;
+}
+
+@media (min-width: 64em) {
+  .section2__background::before {
+    height: 63%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
+    background-image: linear-gradient(to right, #2c2d3f, #3f4164);
+  }
+}
+
+.section2__background::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  background-image: url("../images/bg-pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-size: 156%;
+  background-position: center 144%;
+  z-index: -1;
+}
+
+@media (min-width: 40em) {
+  .section2__background::after {
+    background-position: center 96%;
+  }
+}
+
+@media (min-width: 64em) {
+  .section2__background::after {
+    height: 60%;
+    background-size: 68%;
+    background-position: center 86%;
+    left: -30%;
+  }
+}
+
+.section2__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: normal;
+      -ms-flex-pack: normal;
+          justify-content: normal;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 64em) {
+  .section2__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 40vh;
+  }
+}
+
+.section2__image--desktop {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+@media (min-width: 64em) {
+  .section2__image--desktop {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .section2__image--desktop::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("../images/illustration-phones.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+    top: 216%;
+    right: 24%;
+  }
+}
+
+.section2__content {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  color: white;
+}
+
+.section2__content h2 {
+  font-size: 2.625rem;
+}
+
+@media (min-width: 64em) {
+  .section2__content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0.625rem;
+  }
+  .section2__content h2 {
+    font-size: 2.4rem;
+    text-align: left;
+  }
+  .section2__content p {
+    padding-bottom: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

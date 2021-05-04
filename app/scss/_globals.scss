@@ -118,8 +118,8 @@ button, .button {
 
     &.btn2 {
         color: $white;
-        background-color: none;
-        outline: 1px solid $white;
+        background-color: transparent;
+        border: 1px solid $white;
 
         &:hover {
             color: $lightRed-cta;
