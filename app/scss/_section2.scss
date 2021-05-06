@@ -1,4 +1,5 @@
 .section2 {
+    min-height: 74vh;
 
     &__background {
         &::before {
@@ -10,7 +11,7 @@
             z-index: -2;
 
             @include breakpoint-up(large) {
-                height: 63%;
+                height: 60%;
                 background-image: linear-gradient(to right, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
             }
         }
@@ -83,13 +84,13 @@
                 background-repeat: no-repeat;
                 background-size: auto;
                 background-position: center center;
-                top: 216%;
+                top: 216%; //90rem
                 right: 24%;
             }
         }
     }
 
-    &__content {
+    &__item {
         flex: 2;
         color: $white;
 
