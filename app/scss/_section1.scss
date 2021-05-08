@@ -61,6 +61,11 @@
     }
 
     &__text {
+        padding-bottom: 1.25rem;
         color: $veryDarkGrayishBlue;
+
+        @include breakpoint-up(large) {
+            padding-bottom: 3.125rem;
+        }
     }
 }

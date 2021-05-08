@@ -57,7 +57,7 @@ h4 {
 }
 
 p {
-    padding-bottom: 1.25rem; //remove
+    // padding-bottom: 1.25rem; //remove
     font-size: 1rem;
     text-align: center;
     letter-spacing: 0.070em;
@@ -65,7 +65,7 @@ p {
 
     @include breakpoint-up(large) {
         text-align: left;
-        padding-bottom: 3.125rem; //remove
+        // padding-bottom: 3.125rem; //remove
     }
 }
 
