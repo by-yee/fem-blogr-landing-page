@@ -7,11 +7,15 @@
             content: "";
             position: absolute;
             width: 100%;
-            height: 80%;
+            height: 95%;
             background-image: linear-gradient(to bottom, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
             z-index: -2;
             border-top-right-radius: 100px;
             border-bottom-left-radius: 100px;
+
+            @include breakpoint-up(medium) {
+                height: 80%;
+            }
 
             @include breakpoint-up(large) {
                 height: 60%;
@@ -45,10 +49,6 @@
         }
     }
 
-    &__image--mobile {
-        
-    }
-
     &__flex {
         @include flex-display(column, normal, center);
 
@@ -59,23 +59,21 @@
         }
     }
 
-    &__image--desktop {
-        flex: 3;
+    &__image {
+        height: 8.125rem;
 
-        // &::before {
-            // content: "";
-            // position: absolute;
-            // width: 100%;
-            // min-height: 100%;
-            // background-image: url("../images/illustration-phones.svg");
-            // background-repeat: no-repeat;
-            // background-size: 100%;
-            // background-position: center center;
-            // right: 0;
-            // display: block;
-            // z-index: 1;
-            // top: 1789px;
-        // }
+        &::before {
+            content: "";
+            position: relative;
+            width: 23.125rem;
+            min-height: 25rem;
+            background-image: url("../images/illustration-phones.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+            display: block;
+            top: -270px;
+        }
 
         @include breakpoint-up(large) {
             flex: 1;
@@ -89,14 +87,13 @@
                 background-repeat: no-repeat;
                 background-size: auto;
                 background-position: center center;
-                top: 90rem; //216%
+                top: 85rem; //216%
                 right: 24%;
             }
         }
     }
 
     &__item {
-        flex: 2;
         color: $white;
 
         h2 {

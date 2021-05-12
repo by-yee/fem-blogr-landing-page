@@ -7,13 +7,13 @@
             content: "";
             position: absolute;
             width: 100%;
-            height: 120%;
+            height: 140%; //120%
             background-color: $veryDarkBlackBlue;
             z-index: -1;
             border-top-right-radius: 100px;
 
             @include breakpoint-up(large) {
-                height: 60%;
+                height: 58%; //60%;
             }
         }
     }
@@ -67,7 +67,7 @@
             }
 
             &.col3 {
-                padding-right: 4rem;
+                padding-right: 6rem;
             }
         }
     }

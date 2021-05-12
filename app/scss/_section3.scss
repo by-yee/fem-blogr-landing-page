@@ -15,10 +15,6 @@
         }
     }
 
-    &__content {
-
-    }
-
     &__flex {
         @include breakpoint-up(large) {
             
@@ -28,12 +24,12 @@
 
     &__image--mobile {
         position: relative;
-        min-height: 21rem;
+        min-height: 23rem;
         background-image: url("../images/illustration-laptop-mobile.svg");
         background-repeat: no-repeat;
         background-size: auto;
         background-position: center center;
-        margin: 3.125rem 0px;
+        margin: 1.875rem 0px;
 
         @include breakpoint-up(large) {
             flex: 1;
