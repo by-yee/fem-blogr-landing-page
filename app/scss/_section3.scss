@@ -9,7 +9,7 @@
             background-image: url("../images/illustration-laptop-desktop.svg");
             background-repeat: no-repeat;
             background-size: 63%;
-            background-position: top left;
+            background-position: center left;
             left: -18%;
             z-index: -1;
         }
@@ -33,6 +33,7 @@
 
         @include breakpoint-up(large) {
             flex: 1;
+            min-height: 40rem;
             background-image: none;
         }
     }

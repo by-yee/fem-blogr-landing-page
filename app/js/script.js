@@ -51,15 +51,13 @@ window.addEventListener("resize", function() {
         header.classList.remove('open');
         navbar.classList.remove('fade-in');
         navbar.classList.remove('fade-out');
-        // close_all_accordion();
     }
+    close_all_accordion();
 });
 
 
-
-//Remove the header menu if breakpoint-down is medium
+//Collapse all the accordion
 function close_all_accordion () {
-    // console.log("hello");
     var allItem = document.getElementsByClassName("header__link");
     for (var j = 0; j < allItem.length; j++) {
         allItem[j].classList.remove("active");

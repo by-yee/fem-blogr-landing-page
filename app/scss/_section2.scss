@@ -1,43 +1,28 @@
 .section2 {
-    min-height: 74vh;
+    background-image: linear-gradient(to bottom, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    @include breakpoint-up(large) {
+        background-image: linear-gradient(to right, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+    }
 
     &__background {
-        
+
         &::before {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 95%;
-            background-image: linear-gradient(to bottom, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
-            z-index: -2;
-            border-top-right-radius: 100px;
-            border-bottom-left-radius: 100px;
-
-            @include breakpoint-up(medium) {
-                height: 80%;
-            }
-
-            @include breakpoint-up(large) {
-                height: 60%;
-                background-image: linear-gradient(to right, $veryDarkGrayBlue, $veryDarkDesaturatedBlue);
-            }
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            height: 80%;
+            height: 54%;
             width: 100%;
             background-image: url("../images/bg-pattern-circles.svg");
             background-repeat: no-repeat;
-            background-size: 156%;
+            background-size: 120%;
             background-position: center 144%;
-            z-index: -1;
             border-top-right-radius: 100px;
             border-bottom-left-radius: 100px;
 
             @include breakpoint-up(medium) {
-                background-position: center 96%;
+                background-position: center 100%;
             }
 
             @include breakpoint-up(large) {
@@ -55,7 +40,7 @@
         @include breakpoint-up(large) {
             @include flex-display(row, normal, center);
 
-            min-height: 40vh;
+            min-height: 18.75rem;
         }
     }
 
@@ -87,7 +72,7 @@
                 background-repeat: no-repeat;
                 background-size: auto;
                 background-position: center center;
-                top: 85rem; //216%
+                top: 99rem; //216%
                 right: 24%;
             }
         }
@@ -95,6 +80,7 @@
 
     &__item {
         color: $white;
+        z-index: 1;
 
         h2 {
             font-size: 2.625rem;
