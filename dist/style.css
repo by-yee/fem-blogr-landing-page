@@ -524,9 +524,6 @@ button.btn2:hover, .button.btn2:hover {
   .header__cta a {
     color: #1f3f5b;
   }
-  .header__cta a:hover {
-    opacity: 0.6;
-  }
   .header__cta .btn1 {
     margin-bottom: 0.75rem;
     color: white;
@@ -536,6 +533,10 @@ button.btn2:hover, .button.btn2:hover {
   .header__cta .btn1:hover {
     opacity: 0.7;
   }
+}
+
+.header__login:hover {
+  opacity: 0.6;
 }
 
 @media (max-width: 63.9375em) {
