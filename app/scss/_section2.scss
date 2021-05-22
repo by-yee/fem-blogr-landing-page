@@ -12,7 +12,7 @@
         &::before {
             content: "";
             position: absolute;
-            height: 54%;
+            height: 24rem;
             width: 100%;
             background-image: url("../images/bg-pattern-circles.svg");
             background-repeat: no-repeat;
@@ -26,10 +26,9 @@
             }
 
             @include breakpoint-up(large) {
-                height: 60%;
+                height: 27.5rem;
                 background-size: 68%;
                 background-position: -44% 86%;
-                // left: -30%;
             }
         }
     }
@@ -47,33 +46,36 @@
     &__image {
         height: 8.125rem;
 
-        &::before {
-            content: "";
-            position: relative;
-            width: 23.125rem;
-            min-height: 25rem;
-            background-image: url("../images/illustration-phones.svg");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center center;
-            display: block;
-            top: -270px;
+        @include breakpoint-down(medium) {
+            &::before {
+                content: "";
+                position: relative;
+                width: 23.125rem;
+                min-height: 25rem;
+                background-image: url("../images/illustration-phones.svg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center center;
+                display: block;
+                top: -270px;
+            }
         }
 
         @include breakpoint-up(large) {
             flex: 1;
 
             &::before {
-                content: "";
+                content: url("../images/illustration-phones.svg");
                 position: absolute;
-                width: 100%;
-                min-height: 100%;
-                background-image: url("../images/illustration-phones.svg");
-                background-repeat: no-repeat;
-                background-size: auto;
-                background-position: center center;
-                top: 99rem; //216%
-                right: 24%;
+                margin-top: -12rem;
+                transform: translateX(-24%);
+                // width: 100%;
+                // min-height: 100%;
+                // background-repeat: no-repeat;
+                // background-size: auto;
+                // background-position: center center;
+                // top: 99rem; //216%
+                // right: 24%;
             }
         }
     }

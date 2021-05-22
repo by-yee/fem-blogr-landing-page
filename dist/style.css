@@ -217,7 +217,7 @@ button.btn2:hover, .button.btn2:hover {
 }
 
 .header {
-  min-height: 85vh;
+  min-height: 35rem;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -239,7 +239,7 @@ button.btn2:hover, .button.btn2:hover {
   content: "";
   position: absolute;
   width: 100%;
-  height: 85%;
+  height: 35rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8f70), to(#ff3d54));
   background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
   border-bottom-left-radius: 100px;
@@ -256,7 +256,7 @@ button.btn2:hover, .button.btn2:hover {
 .header__background::after {
   content: "";
   position: absolute;
-  height: 85%;
+  height: 35rem;
   width: 160%;
   background-image: url("../images/bg-pattern-intro.svg");
   background-repeat: no-repeat;
@@ -268,7 +268,7 @@ button.btn2:hover, .button.btn2:hover {
 
 @media (min-width: 40em) {
   .header__background::after {
-    height: 85%;
+    height: 35rem;
     width: 160%;
     background-size: 120%;
     background-position: 130% 38%;
@@ -277,7 +277,7 @@ button.btn2:hover, .button.btn2:hover {
 
 @media (min-width: 64em) {
   .header__background::after {
-    height: 85%;
+    height: 35rem;
     width: 130%;
     background-size: 180%;
     background-position: 34% 52%;
@@ -574,15 +574,10 @@ button.btn2:hover, .button.btn2:hover {
 
 @media (min-width: 64em) {
   .section1::before {
-    content: "";
+    content: url("../images/illustration-editor-desktop.svg");
     position: absolute;
-    height: 144%;
-    width: 100%;
-    background-image: url("../images/illustration-editor-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: 65%;
-    background-position: center center;
-    left: 38%;
+    left: 56%;
+    margin-top: 5rem;
   }
 }
 
@@ -592,7 +587,7 @@ button.btn2:hover, .button.btn2:hover {
 
 @media (min-width: 64em) {
   .section1__content {
-    margin-bottom: 6.5625rem;
+    margin-bottom: 4.5625rem;
   }
 }
 
@@ -691,7 +686,7 @@ button.btn2:hover, .button.btn2:hover {
 .section2__background::before {
   content: "";
   position: absolute;
-  height: 54%;
+  height: 24rem;
   width: 100%;
   background-image: url("../images/bg-pattern-circles.svg");
   background-repeat: no-repeat;
@@ -709,7 +704,7 @@ button.btn2:hover, .button.btn2:hover {
 
 @media (min-width: 64em) {
   .section2__background::before {
-    height: 60%;
+    height: 27.5rem;
     background-size: 68%;
     background-position: -44% 86%;
   }
@@ -754,17 +749,19 @@ button.btn2:hover, .button.btn2:hover {
   height: 8.125rem;
 }
 
-.section2__image::before {
-  content: "";
-  position: relative;
-  width: 23.125rem;
-  min-height: 25rem;
-  background-image: url("../images/illustration-phones.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
-  display: block;
-  top: -270px;
+@media (max-width: 63.9375em) {
+  .section2__image::before {
+    content: "";
+    position: relative;
+    width: 23.125rem;
+    min-height: 25rem;
+    background-image: url("../images/illustration-phones.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    display: block;
+    top: -270px;
+  }
 }
 
 @media (min-width: 64em) {
@@ -774,16 +771,11 @@ button.btn2:hover, .button.btn2:hover {
             flex: 1;
   }
   .section2__image::before {
-    content: "";
+    content: url("../images/illustration-phones.svg");
     position: absolute;
-    width: 100%;
-    min-height: 100%;
-    background-image: url("../images/illustration-phones.svg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center center;
-    top: 99rem;
-    right: 24%;
+    margin-top: -12rem;
+    -webkit-transform: translateX(-24%);
+            transform: translateX(-24%);
   }
 }
 
@@ -813,18 +805,24 @@ button.btn2:hover, .button.btn2:hover {
   }
 }
 
+.section3 {
+  margin: 3rem 0px;
+}
+
 @media (min-width: 64em) {
   .section3::before {
-    content: "";
+    content: url("../images/illustration-laptop-desktop.svg");
     position: absolute;
-    height: 110%;
-    width: 100%;
-    background-image: url("../images/illustration-laptop-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: 63%;
-    background-position: center left;
-    left: -18%;
+    right: 54%;
+    margin-top: 2rem;
     z-index: -1;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .section3__content {
+    padding-top: 0px;
+    padding-bottom: 1.5rem;
   }
 }
 

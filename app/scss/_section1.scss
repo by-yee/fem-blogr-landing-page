@@ -2,15 +2,17 @@
 
     &::before {
         @include breakpoint-up(large) {
-            content: "";
+            content: url("../images/illustration-editor-desktop.svg");;
             position: absolute;
-            height: 144%;
-            width: 100%;
-            background-image: url("../images/illustration-editor-desktop.svg");
-            background-repeat: no-repeat;
-            background-size: 65%;
-            background-position: center center;
-            left: 38%;
+            left: 56%;
+            margin-top: 5rem;
+            // height: 144%;
+            // width: 100%;
+            // background-image: url("../images/illustration-editor-desktop.svg");
+            // background-repeat: no-repeat;
+            // background-size: 65%;
+            // background-position: center center;
+            // left: 38%;
         }
     }
 
@@ -18,7 +20,7 @@
         margin-bottom: 10rem;
 
         @include breakpoint-up(large) {
-            margin-bottom: 6.5625rem;
+            margin-bottom: 4.5625rem;
         }
     }
 
