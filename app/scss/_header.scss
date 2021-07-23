@@ -136,6 +136,10 @@
     }
 
     &__link {
+        &:focus {
+            outline: 2px dotted #1f3f5b;
+        }
+
         &::after {
             content: "";
             display: inline-block;
@@ -187,6 +191,10 @@
         &.open {
             opacity: 1;
             visibility: visible;
+
+            a:focus {
+                outline: 2px dotted #1f3f5b;
+            }
 
             @include breakpoint-down(medium) {
                 align-items: center;
@@ -262,6 +270,11 @@
     &__login {
         &:hover {
             opacity: 0.6;
+        }
+
+        &:focus {
+            border-radius: 50px;
+            outline: 2px dotted #1f3f5b;
         }
 
         @include breakpoint-down(medium) {

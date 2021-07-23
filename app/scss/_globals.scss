@@ -97,6 +97,10 @@ button, .button {
     font-size: 0.9375rem;
     border-radius: 50px;
 
+    &:focus {
+        outline: 2px dotted #1f3f5b;
+    }
+
     &.btn1 {
         margin-right: 0.625rem;
         border: 0;

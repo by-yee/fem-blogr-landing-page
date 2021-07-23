@@ -181,6 +181,10 @@ button, .button {
   border-radius: 50px;
 }
 
+button:focus, .button:focus {
+  outline: 2px dotted #1f3f5b;
+}
+
 button.btn1, .button.btn1 {
   margin-right: 0.625rem;
   border: 0;
@@ -391,6 +395,10 @@ button.btn2:hover, .button.btn2:hover {
   }
 }
 
+.header__link:focus {
+  outline: 2px dotted #1f3f5b;
+}
+
 .header__link::after {
   content: "";
   display: inline-block;
@@ -451,6 +459,10 @@ button.btn2:hover, .button.btn2:hover {
 .header__accordion.open {
   opacity: 1;
   visibility: visible;
+}
+
+.header__accordion.open a:focus {
+  outline: 2px dotted #1f3f5b;
 }
 
 @media (max-width: 63.9375em) {
@@ -537,6 +549,11 @@ button.btn2:hover, .button.btn2:hover {
 
 .header__login:hover {
   opacity: 0.6;
+}
+
+.header__login:focus {
+  border-radius: 50px;
+  outline: 2px dotted #1f3f5b;
 }
 
 @media (max-width: 63.9375em) {
@@ -949,6 +966,10 @@ button.btn2:hover, .button.btn2:hover {
 .footer__links a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
+}
+
+.footer__links a:focus {
+  outline: 2px dotted white;
 }
 
 @media (max-width: 63.9375em) {
